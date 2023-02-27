@@ -1,0 +1,9 @@
+{
+	"recommendations": [
+		"rome.rome",
+		"meganrogge.template-string-converter",
+		"usernamehw.errorlens",
+    "styled-components.vscode-styled-components",
+    "naumovs.color-highlight"
+	]
+}
