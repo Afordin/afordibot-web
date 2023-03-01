@@ -1,7 +1,8 @@
 @font-face {
   font-family: Root Of Life;
-  src: url(./fonts/Root\ Of\ Life.ttf) format(truetype);
+  src: url('./fonts/RootOfLife.ttf') format(truetype);
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +19,8 @@ html, body, #root {
 }
 
 body {
-  background-image: url(../src/assets/pics/background_1.png);
+  background-image: url('./assets/background.png');
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
