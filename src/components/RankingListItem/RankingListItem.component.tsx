@@ -3,9 +3,9 @@ import { FC, ReactElement } from 'react'
 
 interface RankingListProps {
 	trophy?: string
-	place: number
+	place: string | number
 	name: string
-	count: number
+	count: string | number
 }
 
 export const RankingListItem: FC<RankingListProps> = ({ trophy, place, name, count }): ReactElement => {
@@ -14,7 +14,7 @@ export const RankingListItem: FC<RankingListProps> = ({ trophy, place, name, cou
 			{trophy && <S.Trophy src={trophy} alt={`trophy-${place}`} />}
 			<S.Place>#{place}</S.Place>
 			<S.Name>{name}</S.Name>
-			<S.Count>{count}j</S.Count>
+			<S.Count>{count}</S.Count>
 		</S.RankingListItem>
 	)
 }
