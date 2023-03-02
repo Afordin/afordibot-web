@@ -2,7 +2,8 @@
 	"compilerOptions": {
 		"baseUrl": "./src",
 		"paths": {
-			"@assets": ["/assets/*", "/assets"]
+			"@assets": ["/assets/*", "/assets"],
+			"@components": ["/components/*", "/components"],
 		},
 		"target": "ESNext",
 		"useDefineForClassFields": true,
