@@ -4,6 +4,11 @@
 		"paths": {
 			"@assets": ["/assets/*", "/assets"],
 			"@components": ["/components/*", "/components"],
+			"@config": ["/config/*", "/config"],
+			"@context": ["/context/*", "/context"],
+			"@pages": ["/pages/*", "/pages"],
+			"@styles": ["/styles/*", "/styles"],
+			"@types": ["/types/*", "/types"]
 		},
 		"target": "ESNext",
 		"useDefineForClassFields": true,
