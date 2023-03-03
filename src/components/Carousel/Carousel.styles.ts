@@ -46,7 +46,7 @@ export const CarouselItem = styled.li`
   width: 30rem;
   height: 20rem;
   padding: 6px;
-  background-image: linear-gradient(to right, #ec4899, #ef4444, #eab308);
+  background-image: linear-gradient(to right, #3b82f6, #86efac, #9333ea);
   border-radius: 16px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
   transition: margin 0.5s ease-in-out, opacity 0.5s ease-in-out;

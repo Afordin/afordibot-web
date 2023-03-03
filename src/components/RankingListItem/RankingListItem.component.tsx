@@ -11,9 +11,11 @@ interface RankingListProps {
 export const RankingListItem: FC<RankingListProps> = ({ trophy, place, name, count }): ReactElement => {
 	return (
 		<S.RankingListItem>
-			{trophy && <S.Trophy src={trophy} alt={`trophy-${place}`} />}
-			<S.Place>#{place}</S.Place>
-			<S.Name>{name}</S.Name>
+			<S.Container>
+				{trophy && <S.Trophy src={trophy} alt={`trophy-${place}`} />}
+				<S.Place>#{place}</S.Place>
+				<S.Name>{name}</S.Name>
+			</S.Container>
 			<S.Count>{count}</S.Count>
 		</S.RankingListItem>
 	)
