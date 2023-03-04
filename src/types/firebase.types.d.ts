@@ -1,7 +1,7 @@
-export namespace FirebaseTypes {
-	import { AfloresTypes } from './aflores.types'
-	import { JolinesTypes } from './jolines.types'
+import { AfloresTypes } from 'types/aflores.types'
+import { JolinesTypes } from 'types/jolines.types'
 
+export namespace FirebaseTypes {
 	export type User = JolinesTypes.JolinesUser & AfloresTypes.AfloresUser
 
 	export interface Users {
