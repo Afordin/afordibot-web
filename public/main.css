@@ -1,6 +1,11 @@
 @font-face {
-  font-family: Root Of Life;
+  font-family: 'Root Of Life';
   src: url('./fonts/RootOfLife.ttf') format(truetype);
+}
+
+@font-face {
+  font-family: 'Chantelli';
+  src: url('./fonts/ChantelliAntiqua.ttf') format(truetype);
 }
 
 * {
