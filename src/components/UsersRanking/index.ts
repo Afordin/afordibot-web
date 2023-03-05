@@ -1,2 +1,2 @@
-export * from './UsersRanking.component';
+export * from './UsersRanking.component'
 export * as UsersRankingStyles from './UsersRanking.styles'
