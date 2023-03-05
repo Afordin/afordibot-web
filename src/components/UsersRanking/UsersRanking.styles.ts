@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { BoxStyles } from 'styles'
+import { BoxStyles, TitleStyles } from 'styles'
 
 export const UsersRanking = styled.section`
   display: flex;
@@ -23,4 +23,9 @@ export const RankingHeader = styled.header`
   padding: 16px 20px;
   background-color: #1e1e1e;
   border-radius: 8px;
+`
+
+export const RankingTitle = styled(TitleStyles.H2)`
+  color: #ffffff;
+  text-transform: capitalize;
 `
