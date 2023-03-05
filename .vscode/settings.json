@@ -17,5 +17,7 @@
   },
   "editor.codeActionsOnSave": {
     "source.organizeImports.rome": true
-  }
+  },
+  "editor.tabSize": 2,
+  "files.eol": "\r\n"
 }
