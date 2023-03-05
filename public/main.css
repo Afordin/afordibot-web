@@ -4,8 +4,8 @@
 }
 
 @font-face {
-  font-family: 'Chantelli';
-  src: url('./fonts/ChantelliAntiqua.ttf') format(truetype);
+  font-family: 'Raleway';
+  src: url('./fonts/Raleway.ttf') format(truetype);
 }
 
 * {
@@ -13,6 +13,7 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
+  list-style: none;
 }
 
 html {
