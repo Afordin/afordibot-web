@@ -1,5 +1,5 @@
 import * as S from './SubRanking.styles'
-import { Trophy } from 'components/Trophy'
+import { Trophy, TrophyStyles } from 'components/Trophy'
 import { FC, ReactElement, useCallback, useMemo } from 'react'
 import { Separator } from 'styles'
 
@@ -14,13 +14,16 @@ export interface SubRankingProps {
 	ranking: SubRankingUser[]
 }
 
+const places: TrophyStyles.TrophyPlaces[] = ['first', 'second', 'third']
+
 export const SubRanking: FC<SubRankingProps> = ({ title, ranking }): ReactElement => {
+	const cutRanking = useMemo(() => ranking.slice(0, 3), [ranking])
+
 	const renderRanking = useCallback(
 		(item: SubRankingUser, index: number) => (
 			<S.SubRankingItem key={`${title}-${item.name}-${index}`}>
 				<S.SubRankingUser>
-					{/* TODO - add conditional for places */}
-					<Trophy place='first' />
+					<Trophy place={places[index]} />
 					<span>#{index + 1}</span>
 					<span>{item.name}</span>
 				</S.SubRankingUser>
@@ -36,7 +39,7 @@ export const SubRanking: FC<SubRankingProps> = ({ title, ranking }): ReactElemen
 				<S.SubRankingSection>
 					<S.SubRankingTitle>{title}</S.SubRankingTitle>
 					<Separator />
-					<S.SubRankingList>{ranking.map(renderRanking)}</S.SubRankingList>
+					<S.SubRankingList>{cutRanking.map(renderRanking)}</S.SubRankingList>
 				</S.SubRankingSection>
 				<S.SubRankingSection centered>
 					<S.SubRankingImage

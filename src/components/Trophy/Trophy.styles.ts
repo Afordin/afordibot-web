@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 
+export type TrophyPlaces = 'first' | 'second' | 'third'
+
 export interface TrophyProps {
 	width?: number
 	height?: number
-	place: 'first' | 'second' | 'third'
+	place: TrophyPlaces
 }
 
 const places = {
