@@ -1,0 +1,17 @@
+@keyframes fireflyDown {
+  50% {
+    top: 105vh;
+  }
+  100% {
+    top: -20px;
+  }
+}
+
+@keyframes fireflyUp {
+  50% {
+    top: -20px;
+  }
+  100% {
+    top: 105vh;
+  }
+}
