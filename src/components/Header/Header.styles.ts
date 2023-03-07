@@ -9,7 +9,7 @@ export const Header = styled.header`
 `
 
 export const HeaderTitle = styled(TitleStyles.H1)`
-  width: 100%;
+  padding: 2rem;
   background-image: linear-gradient(40deg, #fc00ff 0%, #fc00ff 10%, #00fffc 50%, #fffc00 85%, #fffc00 100%);
   background-clip: text;
   -webkit-background-clip: text;
