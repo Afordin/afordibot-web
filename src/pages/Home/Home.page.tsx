@@ -9,7 +9,7 @@ import { FC, Fragment, ReactElement, useMemo, useState } from 'react'
 import { transformRanking } from 'utils'
 
 export const Home: FC = (): ReactElement => {
-	const { ranking: channelRanking } = useRanking('channels')
+	const { ranking: channelRanking, isRankingLoaded: isChannelLoaded } = useRanking('channels')
 	const { ranking: monthlyRanking } = useRanking('monthly')
 	const { ranking: weeklyRanking } = useRanking('weekly')
 	const [rankingType, setRankingType] = useState<HomeContextModule.RankingType>('jolines')
@@ -23,9 +23,21 @@ export const Home: FC = (): ReactElement => {
 				<S.RankingSection>
 					<UsersRanking />
 					<S.SubRankingSection>
-						<SubRanking title='Ranking por canales' ranking={transformSubRanking(channelRanking)} />
-						<SubRanking title='Ranking mensual' ranking={transformSubRanking(monthlyRanking)} />
-						<SubRanking title='Ranking semanal' ranking={transformSubRanking(weeklyRanking)} />
+						<SubRanking
+							title='Ranking por canales'
+							ranking={transformSubRanking(channelRanking)}
+							isLoaded={isChannelLoaded}
+						/>
+						<SubRanking
+							title='Ranking mensual'
+							ranking={transformSubRanking(monthlyRanking)}
+							isLoaded={isChannelLoaded}
+						/>
+						<SubRanking
+							title='Ranking semanal'
+							ranking={transformSubRanking(weeklyRanking)}
+							isLoaded={isChannelLoaded}
+						/>
 					</S.SubRankingSection>
 				</S.RankingSection>
 			</HomeContextModule.HomeContext.Provider>
