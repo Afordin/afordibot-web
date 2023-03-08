@@ -34,6 +34,7 @@ export const Firefly = styled.div<FireflyProps>`
   background-color: #f6e60a;
   opacity: ${(props) => props.opacity};
   border-radius: 100%;
+  filter: blur(1px);
   box-shadow: ${(props) => `0 0 ${props.blur}px ${props.spread}px #ffffff`};
   transform: ${(props) => `scale(${props.scale})`};
   animation: ${(props) => `${props.animation} ${props.duration}s linear ${props.delay}s infinite alternate`};

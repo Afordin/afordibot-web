@@ -10,20 +10,20 @@ export const Container = styled.div`
 
 export const Loading = styled.div`
   position: absolute;
-  height: 40px;
-  width: 40px;
-  border: 4px solid;
-  border-radius: 100%;
-  border-color: #fff0 #af1155 #af1155 #af1155;
-  animation: loading 0.5s ease infinite;
+  height: 50px;
+  width: 50px;
+  border: 4px solid #af1155;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: loading 2s linear infinite;
 `
 
 export const invLoading = styled.div`
   position: absolute;
   height: 35px;
   width: 35px;
-  border: 4px solid;
-  border-radius: 100%;
-  border-color: #fff0 #888 #888 #888;
-  animation: invLoading 0.5s ease infinite;
+  border: 4px solid #888888;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: loading 2s linear infinite reverse;
 `
