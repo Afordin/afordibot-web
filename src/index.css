@@ -24,3 +24,12 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes rain {
+  from {
+      top: -300px;
+  }
+  to {
+      top: 100vh;
+  }
+}
