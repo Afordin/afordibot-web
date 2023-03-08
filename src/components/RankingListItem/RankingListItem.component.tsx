@@ -1,19 +1,21 @@
 import * as S from './RankingListItem.styles'
+import { Trophy, TrophyStyles } from 'components/Trophy'
 import { FC, ReactElement } from 'react'
 
 interface RankingListProps {
-	trophy?: string
-	place: string | number
+	place: number
 	name: string
 	count: string | number
 }
 
-export const RankingListItem: FC<RankingListProps> = ({ trophy, place, name, count }): ReactElement => {
+const places: TrophyStyles.TrophyPlaces[] = ['first', 'second', 'third']
+
+export const RankingListItem: FC<RankingListProps> = ({ place, name, count }): ReactElement => {
 	return (
 		<S.RankingListItem>
 			<S.Container>
-				{trophy && <S.Trophy src={trophy} alt={`trophy-${place}`} />}
-				<S.Place>#{place}</S.Place>
+				{place < 3 && <Trophy place={places[place]} />}
+				<S.Place>#{place + 1}</S.Place>
 				<S.Name>{name}</S.Name>
 			</S.Container>
 			<S.Count>{count}</S.Count>
