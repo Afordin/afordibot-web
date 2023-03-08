@@ -2,9 +2,10 @@ import * as S from './UsersRanking.styles'
 import { Loading } from 'components/Loading'
 import { RankingList } from 'components/RankingList'
 import { RankingListItem, RankingListTop } from 'components/RankingListItem'
+import { RankingToggleButton } from 'components/RankingToggleButton'
 import { HomeContextModule } from 'context'
 import { useRanking } from 'hooks'
-import { FC, Fragment, ReactElement, useCallback, useContext } from 'react'
+import { FC, ReactElement, useCallback, useContext } from 'react'
 import { GlobalTypes } from 'types/global.types'
 import { RankingTypes } from 'types/ranking.types'
 import { filterAflores, filterJolines, sortAflores, sortJolines } from 'utils'
@@ -77,6 +78,7 @@ export const UsersRanking: FC = (): ReactElement => {
 			<S.RankingHeaderContainer>
 				<S.RankingHeader>
 					<S.RankingTitle>{rankingType}</S.RankingTitle>
+					<RankingToggleButton />
 				</S.RankingHeader>
 			</S.RankingHeaderContainer>
 			<RankingList>
