@@ -20,9 +20,7 @@ export const Card: FC<CardProps> = ({ title, children, lottie }): ReactElement =
 						<S.CardLottie animationData={lottie} />
 					</S.CardContentSection>
 				)}
-				<S.CardContentSection fullWidth={!lottie}>
-					<S.CardDesc>{children}</S.CardDesc>
-				</S.CardContentSection>
+				<S.CardContentSection fullWidth={!lottie}>{children}</S.CardContentSection>
 			</S.CardContent>
 		</S.Card>
 	)

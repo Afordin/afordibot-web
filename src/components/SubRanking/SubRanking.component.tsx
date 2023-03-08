@@ -47,7 +47,7 @@ export const SubRanking: FC<SubRankingProps> = ({ title, ranking, rankingName, i
 							<S.SubRankingList>{cutRanking.map(renderRanking)}</S.SubRankingList>
 						</S.SubRankingSection>
 						<S.SubRankingSection centered>
-							<S.SubRankingImage src={cutRanking[0]?.imageUrl} alt='winner' />
+							{cutRanking.length > 0 && <S.SubRankingImage src={cutRanking[0].imageUrl} alt='winner' />}
 						</S.SubRankingSection>
 					</Fragment>
 				) : (

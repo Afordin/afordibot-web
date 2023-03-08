@@ -24,21 +24,18 @@ export const CardContent = styled.div`
 `
 
 export const CardContentSection = styled.section<CardContentSectionProps>`
-  width: 100%;
-  height: 100%;
   ${(props) => props.fullWidth && 'grid-column: 1 / 3;'}
-  &:first-of-type {
-    ${BoxStyles.CenterFlex}
-  }
+  ${BoxStyles.CenterFlex}
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  height: 232px;
+  font-size: 1.8rem;
+  color: #ffffff;
 `
 
 export const CardLottie = styled(Lottie)`
   height: 70%;
-`
-
-export const CardDesc = styled.p`
-  font-size: 1.8rem;
-  color: #ffffff;
 `
 
 export const CardImg = styled.img`

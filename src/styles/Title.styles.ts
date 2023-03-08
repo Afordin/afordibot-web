@@ -4,7 +4,7 @@ import { FontStyles } from 'styles/Font.styles'
 export module TitleStyles {
 	export const H1 = styled.h1`
     ${FontStyles.RootOfLife}
-    font-size: clamp(2rem, 30vw, 30rem);
+    font-size: clamp(2rem, 30vw, 26rem);
     text-align: center;
   `
 

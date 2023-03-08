@@ -17,6 +17,7 @@ export const useRanking = (dbRef: FirebaseTypes.DatabaseRef): UseRanking => {
 		const usersRankingRef = ref(FirebaseConfig.database, dbRef)
 		const unsubscribe = onValue(usersRankingRef, (snapshot) => {
 			const data = snapshot.val() as FirebaseTypes.UserRanking
+			if (!data) return setIsRankingLoaded(true)
 			const users = Object.entries(data).map(([key, value]) => ({ name: key, ...value }))
 			if (!isRankingLoaded) setIsRankingLoaded(true)
 			setRanking(users)

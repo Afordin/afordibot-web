@@ -22,3 +22,10 @@ export const SubRankingSection = styled.section`
   grid-template-rows: repeat(3, 1fr);
   gap: 4rem;
 `
+
+export const Link = styled.a`
+  color: #61dafb;
+  &:visited {
+    color: #61dafb;
+  }
+`
