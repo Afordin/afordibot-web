@@ -13,17 +13,18 @@ export interface SubRankingUser {
 export interface SubRankingProps {
 	title: string
 	ranking: SubRankingUser[]
+	rankingName: string
 	isLoaded: boolean
 }
 
 const places: TrophyStyles.TrophyPlaces[] = ['first', 'second', 'third']
 
-export const SubRanking: FC<SubRankingProps> = ({ title, ranking, isLoaded }): ReactElement => {
+export const SubRanking: FC<SubRankingProps> = ({ title, ranking, rankingName, isLoaded }): ReactElement => {
 	const cutRanking = useMemo(() => ranking.slice(0, 3), [ranking])
 
 	const renderRanking = useCallback(
 		(item: SubRankingUser, index: number) => (
-			<S.SubRankingItem key={`${title}-${item.name}-${index}`}>
+			<S.SubRankingItem key={`${rankingName}-${index}`}>
 				<S.SubRankingUser>
 					<Trophy place={places[index]} />
 					<span>#{index + 1}</span>
@@ -32,7 +33,7 @@ export const SubRanking: FC<SubRankingProps> = ({ title, ranking, isLoaded }): R
 				<span>{item.value}</span>
 			</S.SubRankingItem>
 		),
-		[title],
+		[rankingName],
 	)
 
 	return (

@@ -47,16 +47,19 @@ export const Home: FC = (): ReactElement => {
 						<SubRanking
 							title='Ranking por canales'
 							ranking={transformSubRanking(channelRanking)}
+							rankingName='channels'
 							isLoaded={isChannelLoaded}
 						/>
 						<SubRanking
 							title='Ranking mensual'
 							ranking={transformSubRanking(monthlyRanking)}
+							rankingName='monthly'
 							isLoaded={isMonthlyLoaded}
 						/>
 						<SubRanking
 							title='Ranking semanal'
 							ranking={transformSubRanking(weeklyRanking)}
+							rankingName='weekly'
 							isLoaded={isWeeklyLoaded}
 						/>
 					</S.SubRankingSection>
