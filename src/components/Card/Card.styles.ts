@@ -1,9 +1,14 @@
+import Lottie from 'lottie-react'
 import styled from 'styled-components'
-import { FontStyles } from 'styles'
+import { BoxStyles, FontStyles } from 'styles'
+
+export interface CardContentSectionProps {
+	fullWidth?: boolean
+}
 
 export const Card = styled.section`
   ${FontStyles.Raleway}
-  padding: 1.5rem;
+  padding: 16px;
 `
 
 export const CardTitle = styled.h3`
@@ -12,11 +17,23 @@ export const CardTitle = styled.h3`
   color: #ffffff;
 `
 
-export const CardContainer = styled.div`
+export const CardContent = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+`
+
+export const CardContentSection = styled.section<CardContentSectionProps>`
+  width: 100%;
+  height: 100%;
+  ${(props) => props.fullWidth && 'grid-column: 1 / 3;'}
+  &:first-of-type {
+    ${BoxStyles.CenterFlex}
+  }
+`
+
+export const CardLottie = styled(Lottie)`
+  height: 70%;
 `
 
 export const CardDesc = styled.p`

@@ -2,22 +2,28 @@ import * as S from './Card.styles'
 import { FC, ReactElement } from 'react'
 import { Separator } from 'styles'
 
-export interface CardImageProps {
+export interface CardProps {
 	title: string
-	desc: string
-	image?: string
-	imageAlt?: string
+	children: string | ReactElement | ReactElement[]
+	// rome-ignore lint/suspicious/noExplicitAny: it's a lottie animation difficult to type correctly
+	lottie?: any
 }
 
-export const Card: FC<CardImageProps> = ({ title, desc, image, imageAlt }): ReactElement => {
+export const Card: FC<CardProps> = ({ title, children, lottie }): ReactElement => {
 	return (
 		<S.Card>
 			<S.CardTitle>{title}</S.CardTitle>
 			<Separator size='small' />
-			<S.CardContainer>
-				{image && <S.CardImg src={image} alt={imageAlt} />}
-				<S.CardDesc>{desc}</S.CardDesc>
-			</S.CardContainer>
+			<S.CardContent>
+				{lottie && (
+					<S.CardContentSection>
+						<S.CardLottie animationData={lottie} />
+					</S.CardContentSection>
+				)}
+				<S.CardContentSection fullWidth={!lottie}>
+					<S.CardDesc>{children}</S.CardDesc>
+				</S.CardContentSection>
+			</S.CardContent>
 		</S.Card>
 	)
 }

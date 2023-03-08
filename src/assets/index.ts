@@ -1,5 +1,6 @@
+import aflor from './aflor.json'
 import arrowLeft from './arrow_left.svg'
-import porkyFear from './porky_fear.gif'
-import porkyRunning from './porky_running.gif'
+import flameDuck from './flame_duck.json'
+import porkyHappy from './porky_happy.json'
 
-export { arrowLeft, porkyFear, porkyRunning }
+export { arrowLeft, porkyHappy, flameDuck, aflor }
