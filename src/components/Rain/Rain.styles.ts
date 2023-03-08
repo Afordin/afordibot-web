@@ -4,6 +4,7 @@ export interface RainProps {
 	delay: number
 	duration: number
 	left: number
+	size: number
 }
 
 export const RainCont = styled.section`
@@ -17,15 +18,13 @@ export const RainCont = styled.section`
   z-index: -1;
 `
 
-export const Rain = styled.i<RainProps>`
+export const Rain = styled.div<RainProps>`
   position: absolute;
-  width: 2px;
-  height: 50px;
-  top: -350px;
+  top: -35rem;
+  left: ${(props) => `${props.left}px`};
+  width: 1px;
+  height: ${(props) => `${props.size}px`};
   background-color: #d3d3d3;
   filter: blur(1.2px);
-  animation: rain linear infinite;
-  animation-duration: ${(props) => `${props.duration}s`};
-  animation-delay: ${(props) => `${props.delay}s`};
-  left: ${(props) => `${props.left}px`};
+  animation: rain ${(props) => `${props.duration}s`} linear ${(props) => `${props.delay}s`} infinite;
 `
