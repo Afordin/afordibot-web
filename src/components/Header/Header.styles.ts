@@ -14,7 +14,7 @@ export const HeaderTitle = styled(TitleStyles.H1)`
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  transition: filter 0.3s ease-in-out;
+  transition: filter 0.2s ease-in-out;
   user-select: none;
   &:hover {
     filter: drop-shadow(0 0 1rem #00bbbb);

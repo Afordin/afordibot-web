@@ -17,7 +17,7 @@ export const UsersRanking: FC = (): ReactElement => {
 		const filteredUsers = usersRanking.filter(filterJolines) as GlobalTypes.PickRequired<RankingTypes.User, 'jolines'>[]
 		const sortedUsers = filteredUsers.sort(sortJolines).slice(0, 10)
 		return sortedUsers.map((user, index) => (
-			<RankingListItem key={index} place={index + 1} name={user.name} count={user.jolines} />
+			<RankingListItem key={index} place={index} name={user.name} count={user.jolines} />
 		))
 	}, [usersRanking])
 
@@ -25,7 +25,7 @@ export const UsersRanking: FC = (): ReactElement => {
 		const filteredUsers = usersRanking.filter(filterAflores) as GlobalTypes.PickRequired<RankingTypes.User, 'aflores'>[]
 		const sortedUsers = filteredUsers.sort(sortAflores).slice(0, 10)
 		return sortedUsers.map((user, index) => (
-			<RankingListItem key={index} place={index + 1} name={user.name} count={user.aflores.total} />
+			<RankingListItem key={index} place={index} name={user.name} count={user.aflores.total} />
 		))
 	}, [usersRanking])
 
