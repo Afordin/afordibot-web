@@ -1,16 +1,17 @@
 import * as S from './UsersRanking.styles'
+import { Loading } from 'components/Loading'
 import { RankingList } from 'components/RankingList'
 import { RankingListItem, RankingListTop } from 'components/RankingListItem'
 import { HomeContextModule } from 'context'
 import { useRanking } from 'hooks'
-import { FC, ReactElement, useCallback, useContext } from 'react'
+import { FC, Fragment, ReactElement, useCallback, useContext } from 'react'
 import { GlobalTypes } from 'types/global.types'
 import { RankingTypes } from 'types/ranking.types'
 import { filterAflores, filterJolines, sortAflores, sortJolines } from 'utils'
 
 export const UsersRanking: FC = (): ReactElement => {
 	const { rankingType } = useContext(HomeContextModule.HomeContext)
-	const { ranking: usersRanking } = useRanking('users')
+	const { ranking: usersRanking, isRankingLoaded } = useRanking('users')
 
 	const renderJolinesRanking = useCallback(() => {
 		const filteredUsers = usersRanking.filter(filterJolines) as GlobalTypes.PickRequired<RankingTypes.User, 'jolines'>[]
@@ -78,7 +79,9 @@ export const UsersRanking: FC = (): ReactElement => {
 					<S.RankingTitle>{rankingType}</S.RankingTitle>
 				</S.RankingHeader>
 			</S.RankingHeaderContainer>
-			<RankingList>{rankingType === 'jolines' ? renderJolinesRanking() : renderAfloresRanking()}</RankingList>
+			<RankingList>
+				{isRankingLoaded ? rankingType === 'jolines' ? renderJolinesRanking() : renderAfloresRanking() : <Loading />}
+			</RankingList>
 		</S.UsersRanking>
 	)
 }
