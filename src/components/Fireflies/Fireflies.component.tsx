@@ -20,7 +20,7 @@ export const Fireflies: FC = (): ReactElement => {
 					duration: FirefliesAnimation.getRandomNumberInclusive(30, 50),
 					delay: FirefliesAnimation.getRandomNumberInclusive(0, 3),
 				}
-				return <S.Firefly key={index} {...values}/>
+				return <S.Firefly key={index} {...values} />
 			})}
 		</S.Fireflies>
 	)
