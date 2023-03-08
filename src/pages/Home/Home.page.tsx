@@ -9,6 +9,7 @@ import { useRanking } from 'hooks'
 import { FC, Fragment, ReactElement, useMemo, useState } from 'react'
 import { transformRanking } from 'utils'
 import { porkyFear, porkyRunning } from 'assets'
+import { Footer } from 'components/Footer'
 
 export const Home: FC = (): ReactElement => {
 	const { ranking: channelRanking, isRankingLoaded: isChannelLoaded } = useRanking('channels')
@@ -61,6 +62,7 @@ export const Home: FC = (): ReactElement => {
 					</S.SubRankingSection>
 				</S.RankingSection>
 			</HomeContextModule.HomeContext.Provider>
+			<Footer />
 		</Fragment>
 	)
 }
