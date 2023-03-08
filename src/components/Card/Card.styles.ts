@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { FontStyles } from 'styles';
+import styled from 'styled-components'
+import { FontStyles } from 'styles'
 
 export const Card = styled.section`
   ${FontStyles.Raleway}
@@ -13,7 +13,6 @@ export const CardTitle = styled.h3`
 `
 
 export const CardContainer = styled.div`
-  height: 70%;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -22,11 +21,12 @@ export const CardContainer = styled.div`
 
 export const CardDesc = styled.p`
   font-size: 1.8rem;
-  width: 60%;
   color: #ffffff;
 `
 
 export const CardImg = styled.img`
   width: 10rem;
+  height: 10rem;
+  padding: 6px;
   border-radius: 50%;
 `

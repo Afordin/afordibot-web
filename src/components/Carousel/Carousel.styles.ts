@@ -43,15 +43,15 @@ export const CarouselButton = styled.button`
 `
 
 export const CarouselItem = styled.li`
-  width: 30rem;
-  height: 20rem;
+  width: 50rem;
+  height: 25rem;
   padding: 6px;
   background-image: linear-gradient(to right, #3b82f6, #86efac, #9333ea);
   border-radius: 16px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
   transition: margin 0.5s ease-in-out, opacity 0.5s ease-in-out;
   & > * {
-    width: calc(30rem - 12px);
+    width: calc(50rem - 12px);
     height: 100%;
     background-color: #1e1e1e;
     border-radius: 10px;
@@ -68,7 +68,7 @@ export const CarouselList = styled.ul<CarouselListProps>`
   list-style: none;
   overflow: hidden;
   & > ${CarouselItem}:first-of-type {
-    margin-left: calc(50% - 15rem - ${(props) => props.current * 34}rem);
+    margin-left: calc(50% - 25rem - ${(props) => props.current * 54}rem);
   }
   ${CarouselAnimation.opacityAnimation}
 `
