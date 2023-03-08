@@ -7,12 +7,13 @@ export const Footer = styled.footer`
   text-align: center;
   padding: 3rem;
 `
-export const TitleFooter = styled.h3`
+export const TitleFooter = styled.h4`
   font-size: 2.5rem;
   color: #ffffff;
 `
 
-export const DevsFooter = styled.h4`
+export const DevsFooter = styled.p`
   font-size: 1.5rem;
+  font-weight: bold;
   color: #ffffff;
 `
