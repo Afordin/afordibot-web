@@ -14,6 +14,7 @@ const sortUsers = (rankingType: RankingType) => (a: RankingUser, b: RankingUser)
 const mapUsers = (rankingType: RankingType) => (user: RankingUser) => ({
 	name: user.name,
 	value: rankingType === 'jolines' ? user.jolines : user.aflores.total,
+	imageUrl: user.imageUrl,
 })
 
 export const transformRanking = (rankingType: RankingType) => (ranking: Ranking): SubRankingUser[] => {
