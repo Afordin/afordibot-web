@@ -25,7 +25,7 @@ export const Home: FC = (): ReactElement => {
 				<Carousel>
 					<Card title='¿Qué es AfordiBot?' lottie={flameDuck}>
 						<p>
-							Un bot especificamente diseñado para apoderarse el canal de{' '}
+							Un bot específicamente diseñado para apoderarse el canal de{' '}
 							<S.Link href='https://www.twitch.tv/afor_digital' target='_blank' rel='noreferrer'>
 								@afor_digital
 							</S.Link>
@@ -35,21 +35,21 @@ export const Home: FC = (): ReactElement => {
 					</Card>
 					<Card title='Vale, ahora en serio...'>
 						<p>
-							Podras interactuar con el bot en tu canal de twitch usando los comandos y palabras clave que hemos elegido
+							Podrás interactuar con el bot en tu canal de Twitch usando los comandos y palabras clave que hemos elegido
 							para jugar.
 						</p>
-						<p>¿Serás capaz de ser el primero en los rankings y superar a los demas usuarios?</p>
+						<p>¿Serás capaz de ser el primero en los rankings y superar a los demás usuarios?</p>
 					</Card>
 					<Card title={`Jolines ${getRandomJolin()}`} lottie={porkyHappy}>
 						<p>
-							¿Te sientes vacio por dentro? No esperes mas, alimenta a nuestro cerdito de los jolines escribiendo
+							¿Te sientes vacío por dentro? No esperes más, alimenta a nuestro cerdito de los jolines escribiendo
 							"jolin" en el chat.
 						</p>
-						<p>Cuenta tus jolines y los del canal usando los comandos "!jolines" y "!jolines @usuario"!</p>
+						<p>¡Cuenta tus jolines y los del canal usando los comandos "!jolines" y "!jolines @usuario"!</p>
 					</Card>
 					<Card title={`Aflores ${getRandomAflor()}`} lottie={aflor}>
 						<p>
-							¿A quien no le gustan las flores? Dale cariño a tus amigos del chat con el comando "!aflor @usuario" y
+							¿A quién no le gustan las flores? Dale cariño a tus amigos del chat con el comando "!aflor @usuario" y
 							hazlos ganar el ranking de aflores (no incluye flores reales).
 						</p>
 					</Card>
