@@ -29,3 +29,21 @@ export const RankingTitle = styled(TitleStyles.H2)`
   color: #ffffff;
   text-transform: capitalize;
 `
+
+export const RankingTopContainer = styled.div`
+  width: 100%;
+  & > li {
+    height: 72px;
+    border-bottom: 1px solid #888888;
+  }
+  & > li:first-of-type {
+    border-radius: 8px 8px 0 0;
+  }
+  & > li:nth-of-type(2) {
+    border-radius: 0;
+  }
+  & > li:last-of-type {
+    border-radius: 0 0 8px 8px;
+    border-bottom: none;
+  }
+`
