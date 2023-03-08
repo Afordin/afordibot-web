@@ -6,8 +6,7 @@ import { useRanking } from 'hooks'
 import { FC, ReactElement, useCallback, useContext } from 'react'
 import { GlobalTypes } from 'types/global.types'
 import { RankingTypes } from 'types/ranking.types'
-import { filterAflores, sortAflores } from 'utils/handleAflores'
-import { filterJolines, sortJolines } from 'utils/handleJolines'
+import { filterAflores, filterJolines, sortAflores, sortJolines } from 'utils'
 
 export const UsersRanking: FC = (): ReactElement => {
 	const { rankingType } = useContext(HomeContextModule.HomeContext)
