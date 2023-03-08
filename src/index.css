@@ -1,0 +1,35 @@
+@keyframes fireflyDown {
+  50% {
+    top: 105vh;
+  }
+  100% {
+    top: -20px;
+  }
+}
+
+@keyframes fireflyUp {
+  50% {
+    top: -20px;
+  }
+  100% {
+    top: 105vh;
+  }
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rain {
+  from {
+    top: -300px;
+  }
+  to {
+    top: 100vh;
+  }
+}

@@ -1,8 +1,19 @@
+@font-face {
+  font-family: 'Root Of Life';
+  src: url('./fonts/RootOfLife.ttf') format(truetype);
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('./fonts/Raleway.ttf') format(truetype);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
+  list-style: none;
 }
 
 html {
@@ -11,4 +22,12 @@ html {
 
 html, body, #root {
   min-height: 100vh;
+}
+
+body {
+  background-image: url('./assets/background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
